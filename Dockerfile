@@ -2,10 +2,10 @@ FROM node:8.11.1
 
 LABEL author="chuidylan" email="chuidylan@gmail.com"
 
-ADD . /home/demo
+COPY . ${whoami}/app
 
-WORKDIR /home/demo
+VOLUME [ "${whoami}/app" ]
 
-VOLUME [ "/home/demo" ]
+WORKDIR ${whoami}/app
 
 RUN [ "node", "index.js"]
