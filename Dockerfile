@@ -6,6 +6,8 @@ COPY . /home/app
 
 VOLUME [ "home/app" ]
 
+RUN ["npm", "install"]
+
 WORKDIR /home/app
 
 CMD [ "npm", "start"]
