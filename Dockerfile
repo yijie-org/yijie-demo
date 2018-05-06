@@ -1,11 +1,11 @@
-FROM node:8.11.1
+FROM node:8
 
 LABEL author="chuidylan" email="chuidylan@gmail.com"
 
-COPY . ${whoami}/app
+COPY . /home/app
 
-VOLUME [ "${whoami}/app" ]
+VOLUME [ "home/app" ]
 
-WORKDIR ${whoami}/app
+WORKDIR /home/app
 
-RUN [ "node", "index.js"]
+CMD [ "npm", "start"]
