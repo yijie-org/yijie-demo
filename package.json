@@ -4,7 +4,8 @@
   "description": "A simple demo",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=. node index.js" 
+    "start": "NODE_PATH=. node index.js",
+    "test": "echo 'test success ...' && exit 0"
   },
   "repository": {
     "type": "git",
